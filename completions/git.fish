@@ -1,7 +1,9 @@
 # fish completion for git
 
 function __fish_git_branches
-  git branch --no-color -a 2>/dev/null | sed 's/^..//'
+  #taken from git bash-completion in git source
+  git for-each-ref --shell --format="%(refname:short)" "refs/remotes/" | sed 's/^\'\(.*\)\'$/\1/' #pipe through sed to remove quotes
+  git branch --no-color 2>/dev/null | sed 's/^..//'
 end
 
 function __fish_git_tags
