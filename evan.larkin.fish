@@ -1,1 +1,0 @@
-set -x EDITOR "mate -l 1 -w"

@@ -7,7 +7,7 @@ end
 set fish_greeting ""
 set -x CLICOLOR 1
 
-set -x BROWSER open
+set -x BROWSER google-chrome
 
 set -l user (whoami)
 
